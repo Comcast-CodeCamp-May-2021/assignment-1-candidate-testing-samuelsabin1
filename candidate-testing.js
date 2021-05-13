@@ -43,13 +43,13 @@ function gradeQuiz(candidateAnswers) {
 let initialScore=0;
 let questionCount=0;
 let overallTestStatus='';
-    if (String(userAnswers[0]) === 'sally ride' || String(userAnswers[0]) === 'Sally Ride' || String(userAnswers[0]) ==='sally Ride' || String(userAnswers[0]) === 'Sally ride'){
+    if (String(userAnswers[0].toLowerCase()) === 'sally ride'){
       initialScore= 100;
       questionCount= 1;
     }
 
     
-    if (String(userAnswers[1]) === 'true' ||String(userAnswers[1])==='TRUE'||String(userAnswers[1])==='True'){
+    if (String(userAnswers[1].toLowerCase()) === 'true'){
       initialScore = initialScore + 100;
       questionCount = questionCount + 1;
     }
@@ -60,7 +60,7 @@ let overallTestStatus='';
     }
 
     
-    if(String(userAnswers[3])==='Trajectory'|| String(userAnswers[3])==='trajectory'){
+    if(String(userAnswers[3].toLowerCase())==='trajectory'){
       initialScore = initialScore + 100;
       questionCount = questionCount + 1;
     }
